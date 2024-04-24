@@ -180,8 +180,8 @@ int main(void)
     int j=0;
     int F = 512;
 
-    file = fopen ("test_x.txt","r"); //the audio data stored in a textfile
-    ground_truth_f = fopen ("test_y.txt","r"); //the ground truth textfile
+    file = fopen ("../../test_x.txt","r"); //the audio data stored in a textfile
+    ground_truth_f = fopen ("../../test_y.txt","r"); //the ground truth textfile
 
      while (!feof (ground_truth_f))
     {
