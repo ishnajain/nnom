@@ -28,7 +28,7 @@
 
 #include "mfcc.h"
 #include "float.h"
-
+#include "nnom_port.h"
 
 #define M_PI 3.14159265358979323846264338327950288
 
@@ -102,7 +102,7 @@ void fft(float data_re[], float data_im[], const int N)
 
 static void *mfcc_malloc(size_t size)
 {
-	void * p = malloc(size);
+	void * p = nnom_malloc(size);
 	if(p == NULL)
 		return NULL;
 	memset(p, 0, size);
@@ -110,7 +110,7 @@ static void *mfcc_malloc(size_t size)
 }
 
 static void mfcc_free(void*p){
-	if(p!=NULL) free(p);
+	if(p!=NULL) nnom_free(p);
 }
 
 mfcc_t *mfcc_create(int num_mfcc_features, int feature_offset, int num_fbank, int frame_len, float preempha, int is_append_energy)

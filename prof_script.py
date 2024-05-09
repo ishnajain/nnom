@@ -30,10 +30,10 @@ def parse_assembly(assembly_code):
             if not functions[current_function]['start_address']:
                 functions[current_function]['start_address'] = address
             if 'ret' in line or 'mret' in line:
-                print(line)
+                # print(line)
                 # print("found ret or mret")
                 dec = re.search(r'\b(ret|mret)\b', line)
-                print(dec)
+                # print(dec)
 
                 # print(address_match)
                 address = match.group(1)

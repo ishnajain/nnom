@@ -270,26 +270,27 @@ static nnom_layer_t *model_active(nnom_activation_t *act, nnom_layer_t *target)
 // when model=NULL, it create a new sequential model
 nnom_model_t *new_model(nnom_model_t *model)
 {
-	nnom_model_t *m = model;
-	if (m == NULL)
+	// nnom_model_t *m = model;
+	puts("p10");
+	if (model == NULL)
 	{
-		m = nnom_mem(sizeof(nnom_model_t));
-		m->is_allocated = true;
+		model = nnom_mem(sizeof(nnom_model_t));
+		model->is_allocated = true;
 	}
 	else
 	{
-		nnom_memset(m, 0, sizeof(nnom_model_t));
-		m->is_allocated = false;
+		nnom_memset(model, 0, sizeof(nnom_model_t));
+		model->is_allocated = false;
 	}
 
 	// set methods
-	m->add = model_add;
-	m->hook = model_hook;
-	m->merge = model_merge;
-	m->mergex = model_mergex;
-	m->active = model_active;
+	model->add = model_add;
+	model->hook = model_hook;
+	model->merge = model_merge;
+	model->mergex = model_mergex;
+	model->active = model_active;
 
-	return m;
+	return model;
 }
 
 static void io_tensor_delete(nnom_layer_io_t* io)

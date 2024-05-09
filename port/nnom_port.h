@@ -16,26 +16,35 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#define MMIO8(X)    (*(volatile uint8_t *)(X))
+
+//  errno -1
+#define errno (*__errno())
+extern int *_errno ;
+
+void platform_init_heap();
+void __heap_status(int dump);
 /* use static memory */
-//#define NNOM_USING_STATIC_MEMORY    // enable to use built in memory allocation on a large static memory block
+// #define NNOM_USING_STATIC_MEMORY    // enable to use built in memory allocation on a large static memory block
                                      // must set buf using "nnom_set_static_buf()" before creating a model. 
 
 /* dynamic memory interfaces */
 /* when libc is not available, you shall implement the below memory interfaces (libc equivalents). */
 #ifndef NNOM_USING_STATIC_MEMORY    
-    #define nnom_malloc(n)      malloc(n)       
-    #define nnom_free(p)        free(p)
+    #define nnom_malloc(n)      my_malloc(n)       
+    #define nnom_free(p)        my_free(p)
 #endif
 
 /* memory interface */
 /* when libc is not available, you shall implement your equivalent functions here */
 #define nnom_memset(p,v,s)        memset(p,v,s)        
 #define nnom_memcpy(dst,src,len)  memcpy(dst,src,len)  
+#define strcmp(i,j,n)
 
 /* runtime & debug */
 #define nnom_us_get()       0       // return a microsecond timestamp
 #define nnom_ms_get()       0       // return a millisecond timestamp
-#define NNOM_LOG(...)       printf(__VA_ARGS__)
+#define NNOM_LOG(...)       
 
 /* NNoM configuration */
 #define NNOM_BLOCK_NUM  	(8)		// maximum number of memory blocks, increase it when log request.   
