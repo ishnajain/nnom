@@ -25,13 +25,13 @@ nnom_layer_t *input_s(const nnom_io_config_t* config)
 	nnom_layer_io_t *in, *out;
 	// apply a block memory for all the sub handles.
 	size_t a=sizeof(nnom_io_layer_t) + sizeof(nnom_layer_io_t) * 2;
-	printf("%d\n",a);
+	// printf("%d\n",a);
 	
 	layer = nnom_mem(a);
 	if (layer == NULL)
 		return NULL;
-	puts("p23");
-	 __heap_status(0);
+	// puts("p23");
+	//  __heap_status(0);
 	// distribut the memory to sub handles.
 	in = (void *)((uint8_t*)layer + sizeof(nnom_io_layer_t));
 	out = (void *)((uint8_t*)in + sizeof(nnom_layer_io_t));

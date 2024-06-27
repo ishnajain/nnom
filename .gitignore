@@ -4,6 +4,8 @@ SConscript*
 .idea
 site
 *.o
+*.d
+.*.swp
 *.txt
 *.bin
 __pycache__

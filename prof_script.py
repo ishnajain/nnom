@@ -120,5 +120,5 @@ with open('nnom_dump.txt', 'r') as file:
 
 
 functions = parse_assembly(assembly_code)
-
+print(functions)
 write_to_file(functions)

@@ -95,297 +95,297 @@ get_elapsed_time    ,10651c    ,10652c
 simple_timer_handler,106530    ,106614
 Error_Handler       ,106618    ,106618
 quantize_data       ,10661c    ,1066c0
-thread_kws_serv     ,106740    ,
-main                ,1068f8    ,106c44
-alg_deconv2d_calculate_position,109e50    ,109ec4
-local_avepool_q7_HWC,106d30    ,106f04
-local_avepool_q7_CHW,106f08    ,106fc8
-local_maxpool_q7_HWC,1070e8    ,1072a0
-local_maxpool_q7_CHW,1072a4    ,107358
-local_sumpool_q7_HWC,107468    ,107618
-local_sumpool_q7_CHW,10761c    ,1076c8
-local_up_sampling_q7_HWC,1077d8    ,107944
-local_up_sampling_q7_CHW,107948    ,107adc
-local_convolve_HWC_q7_nonsquare,107ae0    ,107e00
-local_convolve_CHW_q7_nonsquare,107e04    ,108080
-local_conv_trans_HWC_q7_nonsquare,108084    ,1083b4
-local_depthwise_separable_conv_HWC_q7_nonsquare,1083b8    ,1084b0
-local_depthwise_separable_conv_CHW_q7_nonsquare,1086f8    ,1087e0
-local_zero_padding_HWC_q7,108a1c    ,
-local_zero_padding_CHW_q7,108b38    ,108c00
-local_cropping_HWC_q7,108ca4    ,108d1c
-local_cropping_CHW_q7,108d40    ,108de0
-local_dot_q7_opt    ,108e30    ,108f2c
-local_dot_q7        ,10915c    ,109178
-local_fully_connected_q7_opt,1091d4    ,1092ec
-local_fully_connected_q7,109570    ,"109590, 109620, 109680"
-local_softmax_q7    ,109684    ,1096e0
-local_hard_sigmoid_q7,109790    ,10980c
-local_hard_tanh_q7  ,10984c    ,"10988c, 1098a0"
-local_sigmoid_q7    ,1098fc    ,"109920, 109940"
-local_tanh_q7       ,109964    ,"10997c, 10999c"
-local_relu_q7       ,1099e0    ,1099e8
-local_leaky_relu_q7 ,109a00    ,109a0c
-local_adv_relu_q7   ,109a2c    ,109a38
-local_mult_q7       ,109a68    ,109a84
-local_add_q7        ,109ac4    ,109ae0
-local_sub_q7        ,109b20    ,109b3c
-local_multiple_add_q7,109b7c    ,109b98
-local_multiple_mult_q7,109bf0    ,109c0c
-local_multiple_sub_q7,109c64    ,109c80
-local_q7_to_q15_no_shift,109ce0    ,109d04
-local_q7_to_q15     ,109d74    ,109d98
-local_q15_to_q7     ,109e2c    ,109e34
-local_activation_q15,109efc    ,109f20
-local_avepool_q15_HWC,109f84    ,10a150
-local_avepool_q15_CHW,10a154    ,10a218
-local_maxpool_q15_HWC,10a344    ,10a4ec
-local_maxpool_q15_CHW,10a4f0    ,10a5a8
-local_sumpool_q15_HWC,10a6c4    ,10a8a4
-local_sumpool_q15_CHW,10a8a8    ,10a970
-local_up_sampling_q15_HWC,10aaa0    ,10ac24
-local_up_sampling_q15_CHW,10ac28    ,10add0
-local_convolve_HWC_q15_nonsquare,10add4    ,10b124
-local_convolve_CHW_q15_nonsquare,10b128    ,10b3f4
-local_conv_trans_HWC_q15_nonsquare,10b3f8    ,10b784
-local_depthwise_separable_conv_HWC_q15_nonsquare,10b788    ,10b89c
-local_depthwise_separable_conv_CHW_q15_nonsquare,10bae0    ,10bbf0
-local_zero_padding_HWC_q15,10be48    ,
-local_zero_padding_CHW_q15,10bf7c    ,10c05c
-local_cropping_HWC_q15,10c0f8    ,10c180
-local_cropping_CHW_q15,10c1a4    ,10c250
-local_dot_q15       ,10c2a4    ,10c350
-local_dot_q15_opt   ,10c3dc    ,10c4e8
-local_fully_connected_mat_q7_vec_q15_opt,10c7d4    ,10c8e8
-local_fully_connected_mat_q7_vec_q15,10cc58    ,10cd70
-local_softmax_q15   ,10ce30    ,10cec4
-local_hard_sigmoid_q15,10cf88    ,10d014
-local_hard_tanh_q15 ,10d04c    ,"10d090, 10d0a4"
-local_relu_q15      ,10d100    ,10d10c
-local_leaky_relu_q15,10d124    ,10d134
-local_adv_relu_q15  ,10d154    ,10d164
-local_sigmoid_q15   ,10d194    ,
-local_tanh_q15      ,10d1a0    ,
-local_mult_q15      ,10d1ac    ,10d1d0
-local_add_q15       ,10d210    ,10d234
-local_sub_q15       ,10d274    ,10d298
-local_multiple_add_q15,10d2d8    ,10d2fc
-local_multiple_mult_q15,10d354    ,10d3fc
-local_multiple_sub_q15,10d480    ,10d4a4
-local_1_minor_z_q15 ,10d504    ,10d53c
-model_active        ,10d5d4    ,10d5dc
-allocate_block      ,10d5e0    ,10d5f8
-io_list_delete      ,10d5fc    ,10d62c
-find_last           ,10d670    ,"10d674, 10d688"
-model_add           ,10d68c    ,"10d6c8, 10d6e8"
-release_comp_mem.isra.0,10d6ec    ,"10d700, 10d714"
-release_input_mem.isra.0,10d718    ,10d71c
-nnom_mem_stat       ,10d74c    ,10d754
-nnom_alignto        ,10d758    ,10d768
-nnom_mem            ,10d76c    ,10d7c0
-model_hook          ,10d7c4    ,10d87c
-model_mergex        ,10d898    ,10d8f8
-model_merge         ,10d91c    ,
-new_model           ,10d92c    ,10d9ac
-model_delete        ,10d9c8    ,"10da34, 10dac0"
-nnom_io_length      ,10dac4    ,"10dadc, 10dae0"
-nnom_hook_length    ,10dae4    ,"10dafc, 10db00"
-compile_layers      ,10db04    ,10dc7c
-mem_analysis_result ,10de48    ,10de64
-block_mem_set       ,10de68    ,10de94
-tensor_mem_set      ,10de98    ,10dea4
-set_tailed_activation,10def0    ,"10df20, 10df28"
-model_compile       ,10df2c    ,10dfe0
-sequencial_compile  ,10dfec    ,
-layer_run           ,10e028    ,10e078
-model_run_to        ,10e07c    ,10e0e8
-model_run           ,10e10c    ,
-model_set_callback  ,10e114    ,10e130
-model_delete_callback,10e134    ,10e138
-check_model_version ,10e13c    ,10e144
-shape_size          ,10e148    ,"10e160, 10e168"
-shape               ,10e16c    ,10e18c
-kernel              ,10e190    ,10e1ac
-stride              ,10e1b0    ,10e1cc
-dilation            ,10e1d0    ,10e1ec
-border              ,10e1f0    ,10e218
-io_init             ,10e21c    ,10e224
-io_add_aux          ,10e228    ,"10e274, 10e27c"
-tensor_size         ,10e280    ,"10e29c, 10e2bc"
-tensor_size_byte    ,10e2c0    ,10e2ec
-tensor_get_num_channel,10e2f0    ,10e304
-new_tensor          ,10e308    ,10e368
-delete_tensor       ,10e3dc    ,10e3e4
-tensor_set_attr_v   ,10e3e8    ,10e454
-tensor_set_attr     ,10e458    ,10e4f0
-tensor_cpy_attr     ,10e4f4    ,10e590
-tensor_hwc2chw_q7   ,10e59c    ,10e5b4
-tensor_chw2hwc_q7   ,10e618    ,10e640
-hwc2chw_q7          ,10e6a0    ,10e6c8
-chw2hwc_q7          ,10e720    ,10e760
-prediction_create   ,10e7b4    ,10e8d0
-prediction_run      ,10e8d4    ,"10e9fc, 10ea58"
-prediction_end      ,10ea5c    ,10ea6c
-prediction_delete   ,10ea70    ,10eaa8
-prediction_matrix   ,10eaac    ,10eaac
-prediction_top_k    ,10eab0    ,10eab0
-prediction_summary  ,10eab4    ,10eab4
-nnom_predict        ,10eab8    ,10ebcc
-model_stat          ,10ebd8    ,10ebec
-model_io_format     ,10ebf0    ,10ec04
-activation_free     ,10ec08    ,"10ec28, 10ec30"
-relu_run            ,10ec34    ,10ec74
-leaky_relu_run      ,10ec8c    ,10ecdc
-adv_relu_run        ,10ecf8    ,10ee54
-tanh_run            ,10ef58    ,10efb4
-sigmoid_run         ,10efd8    ,10f034
-hard_tanh_run       ,10f058    ,10f0ac
-hard_sigmoid_run    ,10f0c8    ,10f11c
-Activation          ,10f138    ,10f1c8
-act_delete          ,10f1cc    ,
-act_relu            ,10f1d0    ,10f200
-ReLU                ,10f204    ,10f228
-act_leaky_relu      ,10f22c    ,10f290
-LeakyReLU           ,10f294    ,10f2b8
-act_adv_relu        ,10f2bc    ,10f340
-AdvReLU             ,10f344    ,10f368
-act_tanh            ,10f36c    ,10f3ac
-TanH                ,10f3b0    ,10f3d4
-act_sigmoid         ,10f3d8    ,10f418
-Sigmoid             ,10f41c    ,10f440
-act_hard_tanh       ,10f444    ,10f484
-act_hard_sigmoid    ,10f488    ,10f4c8
-act_get_dec_bit     ,10f4cc    ,10f4e0
-act_tensor_run      ,10f4e4    ,
-activation_run      ,10f4f0    ,
-avgpool_build       ,10f500    ,10f518
-avgpool_run         ,10f51c    ,10f5bc
-AvgPool             ,10f5d4    ,10f60c
-avgpool_s           ,10f610    ,10f69c
-default_build       ,10f6ec    ,10f780
-default_run         ,10f784    ,"10f7d8, 10f7e0"
-BaseLayer           ,10f7e4    ,10f854
-baselayer_s         ,10f858    ,10f880
-concat_build        ,10f884    ,10f920
-concat_run          ,10f9f4    ,10fa84
-Concat              ,10fb04    ,10fb88
-concat_s            ,10fb8c    ,10fbb8
-conv2d_run          ,10fbbc    ,10fccc
-conv2d_free         ,10fcd8    ,"10fd10, 10fd18"
-conv2d_s            ,10fd1c    ,10fe88
-Conv2D              ,10fecc    ,11009c
-conv_output_length  ,1100a0    ,1100c4
-conv2d_build        ,1100c8    ,11024c
-conv2d_trans_build  ,110250    ,1103c8
-conv2d_trans_run    ,1103d4    ,1104a0
-conv2d_trans_s      ,1104a4    ,1104dc
-Conv2DTrans         ,1104e0    ,110528
-conv_trans_output_length,11052c    ,110540
-cropping_build      ,110544    ,110624
-cropping_run        ,110628    ,110694
-Cropping            ,110698    ,1106cc
-cropping_s          ,1106d0    ,110700
-dense_build         ,110704    ,110820
-dense_run           ,11085c    ,11091c
-dense_free          ,110920    ,"110958, 110960"
-dense_s             ,110964    ,110a2c
-Dense               ,110a30    ,110ba0
-dw_conv2d_build     ,110ba4    ,110d44
-dw_conv2d_run       ,110d48    ,110e14
-dw_conv2d_s         ,110e18    ,110e50
-DW_Conv2D           ,110e54    ,110e9c
-flatten_run         ,110ea0    ,110ea4
-flatten_build       ,110ea8    ,110f3c
-Flatten             ,110f40    ,110fb4
-flatten_s           ,110fb8    ,110fe0
-global_pool_build   ,110fe4    ,111148
-GlobalMaxPool       ,111170    ,1111e8
-global_maxpool_s    ,1111ec    ,11121c
-GlobalAvgPool       ,111220    ,1112a4
-global_avgpool_s    ,1112a8    ,1112d8
-GlobalSumPool       ,1112dc    ,111360
-global_sumpool_s    ,111364    ,111394
-gru_cell_free       ,111398    ,11139c
-gru_cell_build      ,1113a0    ,11145c
-gru_cell_run        ,111460    ,1116f0
-gru_cell_s          ,1116f4    ,11177c
-input_build         ,111780    ,1117e8
-input_run           ,1117ec    ,111834
-input_s             ,111838    ,111984
-Input               ,1119a8    ,111aa8
-Lambda              ,111aac    ,111b60
-lambda_s            ,111b6c    ,111ba4
-lstm_cell_free      ,111ba8    ,111bac
-lstm_cell_q7_q15_build,111bb0    ,111c60
-lstm_cell_q7_q15_run,111c64    ,111ed8
-lstm_cell_s         ,111edc    ,111f6c
-matrix_build        ,111f70    ,112004
-add_run             ,11201c    ,1120d0
-sub_run             ,1120f0    ,1121a4
-mult_run            ,1121c4    ,112278
-_same_shape_matrix_layer,112298    ,1122f8
-Add                 ,1122fc    ,112338
-add_s               ,11233c    ,112368
-Sub                 ,11236c    ,1123a8
-sub_s               ,1123ac    ,1123d8
-Mult                ,1123dc    ,112418
-mult_s              ,11241c    ,112448
-maxpool_build       ,11244c    ,11253c
-maxpool_run         ,11256c    ,1125f8
-MaxPool             ,112608    ,1126fc
-maxpool_s           ,11270c    ,112790
-output_run          ,1127e0    ,11282c
-output_s            ,112830    ,112894
-Output              ,112898    ,1128f4
-reshape_run         ,1128f8    ,1128fc
-reshape_build       ,112900    ,112984
-reshape_s           ,112988    ,112a1c
-rnn_free            ,112a20    ,112a58
-rnn_build           ,112a5c    ,112b90
-rnn_run             ,112bc8    ,112cb4
-rnn_s               ,112d3c    ,112e04
-simple_cell_free    ,112e08    ,112e0c
-simple_cell_build   ,112e10    ,"112ebc, 112ec4"
-simple_cell_run     ,112ec8    ,112fa0
-simple_cell_s       ,112fac    ,113044
-softmax_build       ,113048    ,1130cc
-softmax_run         ,1130d0    ,113128
-Softmax             ,11312c    ,1131a0
-softmax_s           ,1131a4    ,1131cc
-sumpool_build       ,1131d0    ,11320c
-sumpool_run         ,113210    ,1132a8
-SumPool             ,1132b8    ,1132f0
-sumpool_s           ,1132f4    ,113380
-upsample_build      ,1133d0    ,11349c
-upsample_run        ,1134a0    ,113500
-UpSample            ,113504    ,113590
-upsample_s          ,113594    ,1135e0
-zero_padding_build  ,1135e4    ,1136c8
-zero_padding_run    ,1136cc    ,113738
-ZeroPadding         ,11373c    ,1137c8
-zeropadding_s       ,1137cc    ,1137fc
-merge               ,113800    ,113814
-unumprint.isra.0    ,11384c    ,1138ec
-my_malloc           ,113948    ,"113968, 113994, 1139d8"
-my_free             ,1139dc    ,113a1c
-memcpy              ,113a20    ,113a28
-memset              ,113a44    ,113a50
-platform_init_heap  ,113a60    ,113af0
-heap_usage          ,113af4    ,113b08
-strncmp             ,113b28    ,"113b48, 113b5c"
-_fputc              ,113b60    ,113b98
-_fputs              ,113b9c    ,113bb8
-__vprintf           ,113bbc    ,113c44
-printf              ,113e28    ,113e6c
-__heap_status       ,113e70    ,113f58
-__errno             ,113fb8    ,113fbc
-mfcc_malloc         ,113fc0    ,113ffc
-mfcc_free           ,114000    ,114008
-rearrange           ,11400c    ,114020
-compute             ,114084    ,114114
-fft                 ,1142b0    ,
-mfcc_delete         ,1142f8    ,
-create_dct_matrix   ,114390    ,1144d8
-create_mel_fbank    ,1144dc    ,114644
-mfcc_create         ,1147d4    ,114948
-mfcc_compute        ,114994    ,114cc4
+thread_kws_serv     ,106740    ,10689c
+main                ,10691c    ,106b80
+alg_deconv2d_calculate_position,109d8c    ,109e00
+local_avepool_q7_HWC,106c6c    ,106e40
+local_avepool_q7_CHW,106e44    ,106f04
+local_maxpool_q7_HWC,107024    ,1071dc
+local_maxpool_q7_CHW,1071e0    ,107294
+local_sumpool_q7_HWC,1073a4    ,107554
+local_sumpool_q7_CHW,107558    ,107604
+local_up_sampling_q7_HWC,107714    ,107880
+local_up_sampling_q7_CHW,107884    ,107a18
+local_convolve_HWC_q7_nonsquare,107a1c    ,107d3c
+local_convolve_CHW_q7_nonsquare,107d40    ,107fbc
+local_conv_trans_HWC_q7_nonsquare,107fc0    ,1082f0
+local_depthwise_separable_conv_HWC_q7_nonsquare,1082f4    ,1083ec
+local_depthwise_separable_conv_CHW_q7_nonsquare,108634    ,10871c
+local_zero_padding_HWC_q7,108958    ,
+local_zero_padding_CHW_q7,108a74    ,108b3c
+local_cropping_HWC_q7,108be0    ,108c58
+local_cropping_CHW_q7,108c7c    ,108d1c
+local_dot_q7_opt    ,108d6c    ,108e68
+local_dot_q7        ,109098    ,1090b4
+local_fully_connected_q7_opt,109110    ,109228
+local_fully_connected_q7,1094ac    ,"1094cc, 10955c, 1095bc"
+local_softmax_q7    ,1095c0    ,10961c
+local_hard_sigmoid_q7,1096cc    ,109748
+local_hard_tanh_q7  ,109788    ,"1097c8, 1097dc"
+local_sigmoid_q7    ,109838    ,"10985c, 10987c"
+local_tanh_q7       ,1098a0    ,"1098b8, 1098d8"
+local_relu_q7       ,10991c    ,109924
+local_leaky_relu_q7 ,10993c    ,109948
+local_adv_relu_q7   ,109968    ,109974
+local_mult_q7       ,1099a4    ,1099c0
+local_add_q7        ,109a00    ,109a1c
+local_sub_q7        ,109a5c    ,109a78
+local_multiple_add_q7,109ab8    ,109ad4
+local_multiple_mult_q7,109b2c    ,109b48
+local_multiple_sub_q7,109ba0    ,109bbc
+local_q7_to_q15_no_shift,109c1c    ,109c40
+local_q7_to_q15     ,109cb0    ,109cd4
+local_q15_to_q7     ,109d68    ,109d70
+local_activation_q15,109e38    ,109e5c
+local_avepool_q15_HWC,109ec0    ,10a08c
+local_avepool_q15_CHW,10a090    ,10a154
+local_maxpool_q15_HWC,10a280    ,10a428
+local_maxpool_q15_CHW,10a42c    ,10a4e4
+local_sumpool_q15_HWC,10a600    ,10a7e0
+local_sumpool_q15_CHW,10a7e4    ,10a8ac
+local_up_sampling_q15_HWC,10a9dc    ,10ab60
+local_up_sampling_q15_CHW,10ab64    ,10ad0c
+local_convolve_HWC_q15_nonsquare,10ad10    ,10b060
+local_convolve_CHW_q15_nonsquare,10b064    ,10b330
+local_conv_trans_HWC_q15_nonsquare,10b334    ,10b6c0
+local_depthwise_separable_conv_HWC_q15_nonsquare,10b6c4    ,10b7d8
+local_depthwise_separable_conv_CHW_q15_nonsquare,10ba1c    ,10bb2c
+local_zero_padding_HWC_q15,10bd84    ,
+local_zero_padding_CHW_q15,10beb8    ,10bf98
+local_cropping_HWC_q15,10c034    ,10c0bc
+local_cropping_CHW_q15,10c0e0    ,10c18c
+local_dot_q15       ,10c1e0    ,10c28c
+local_dot_q15_opt   ,10c318    ,10c424
+local_fully_connected_mat_q7_vec_q15_opt,10c710    ,10c824
+local_fully_connected_mat_q7_vec_q15,10cb94    ,10ccac
+local_softmax_q15   ,10cd6c    ,10ce00
+local_hard_sigmoid_q15,10cec4    ,10cf50
+local_hard_tanh_q15 ,10cf88    ,"10cfcc, 10cfe0"
+local_relu_q15      ,10d03c    ,10d048
+local_leaky_relu_q15,10d060    ,10d070
+local_adv_relu_q15  ,10d090    ,10d0a0
+local_sigmoid_q15   ,10d0d0    ,
+local_tanh_q15      ,10d0dc    ,
+local_mult_q15      ,10d0e8    ,10d10c
+local_add_q15       ,10d14c    ,10d170
+local_sub_q15       ,10d1b0    ,10d1d4
+local_multiple_add_q15,10d214    ,10d238
+local_multiple_mult_q15,10d290    ,10d338
+local_multiple_sub_q15,10d3bc    ,10d3e0
+local_1_minor_z_q15 ,10d440    ,10d478
+model_active        ,10d510    ,10d518
+allocate_block      ,10d51c    ,10d534
+io_list_delete      ,10d538    ,10d568
+find_last           ,10d5ac    ,"10d5b0, 10d5c4"
+model_add           ,10d5c8    ,"10d604, 10d624"
+release_comp_mem.isra.0,10d628    ,"10d63c, 10d650"
+release_input_mem.isra.0,10d654    ,10d658
+nnom_mem_stat       ,10d688    ,10d690
+nnom_alignto        ,10d694    ,10d6a4
+nnom_mem            ,10d6a8    ,10d6fc
+model_hook          ,10d700    ,10d7b8
+model_mergex        ,10d7d4    ,10d834
+model_merge         ,10d858    ,
+new_model           ,10d868    ,10d8d8
+model_delete        ,10d8f4    ,"10d960, 10d9ec"
+nnom_io_length      ,10d9f0    ,"10da08, 10da0c"
+nnom_hook_length    ,10da10    ,"10da28, 10da2c"
+compile_layers      ,10da30    ,10dba8
+mem_analysis_result ,10dd74    ,10dd90
+block_mem_set       ,10dd94    ,10ddc0
+tensor_mem_set      ,10ddc4    ,10ddd0
+set_tailed_activation,10de1c    ,"10de4c, 10de54"
+model_compile       ,10de58    ,10df0c
+sequencial_compile  ,10df18    ,
+layer_run           ,10df54    ,10dfa4
+model_run_to        ,10dfa8    ,10e014
+model_run           ,10e038    ,
+model_set_callback  ,10e040    ,10e05c
+model_delete_callback,10e060    ,10e064
+check_model_version ,10e068    ,10e070
+shape_size          ,10e074    ,"10e08c, 10e094"
+shape               ,10e098    ,10e0b8
+kernel              ,10e0bc    ,10e0d8
+stride              ,10e0dc    ,10e0f8
+dilation            ,10e0fc    ,10e118
+border              ,10e11c    ,10e144
+io_init             ,10e148    ,10e150
+io_add_aux          ,10e154    ,"10e1a0, 10e1a8"
+tensor_size         ,10e1ac    ,"10e1c8, 10e1e8"
+tensor_size_byte    ,10e1ec    ,10e218
+tensor_get_num_channel,10e21c    ,10e230
+new_tensor          ,10e234    ,10e294
+delete_tensor       ,10e308    ,10e310
+tensor_set_attr_v   ,10e314    ,10e380
+tensor_set_attr     ,10e384    ,10e41c
+tensor_cpy_attr     ,10e420    ,10e4bc
+tensor_hwc2chw_q7   ,10e4c8    ,10e4e0
+tensor_chw2hwc_q7   ,10e544    ,10e56c
+hwc2chw_q7          ,10e5cc    ,10e5f4
+chw2hwc_q7          ,10e64c    ,10e68c
+prediction_create   ,10e6e0    ,10e7fc
+prediction_run      ,10e800    ,"10e928, 10e984"
+prediction_end      ,10e988    ,10e998
+prediction_delete   ,10e99c    ,10e9d4
+prediction_matrix   ,10e9d8    ,10e9d8
+prediction_top_k    ,10e9dc    ,10e9dc
+prediction_summary  ,10e9e0    ,10e9e0
+nnom_predict        ,10e9e4    ,10eaf8
+model_stat          ,10eb04    ,10eb18
+model_io_format     ,10eb1c    ,10eb30
+activation_free     ,10eb34    ,"10eb54, 10eb5c"
+relu_run            ,10eb60    ,10eba0
+leaky_relu_run      ,10ebb8    ,10ec08
+adv_relu_run        ,10ec24    ,10ed80
+tanh_run            ,10ee84    ,10eee0
+sigmoid_run         ,10ef04    ,10ef60
+hard_tanh_run       ,10ef84    ,10efd8
+hard_sigmoid_run    ,10eff4    ,10f048
+Activation          ,10f064    ,10f0f4
+act_delete          ,10f0f8    ,
+act_relu            ,10f0fc    ,10f12c
+ReLU                ,10f130    ,10f154
+act_leaky_relu      ,10f158    ,10f1bc
+LeakyReLU           ,10f1c0    ,10f1e4
+act_adv_relu        ,10f1e8    ,10f26c
+AdvReLU             ,10f270    ,10f294
+act_tanh            ,10f298    ,10f2d8
+TanH                ,10f2dc    ,10f300
+act_sigmoid         ,10f304    ,10f344
+Sigmoid             ,10f348    ,10f36c
+act_hard_tanh       ,10f370    ,10f3b0
+act_hard_sigmoid    ,10f3b4    ,10f3f4
+act_get_dec_bit     ,10f3f8    ,10f40c
+act_tensor_run      ,10f410    ,
+activation_run      ,10f41c    ,
+avgpool_build       ,10f42c    ,10f444
+avgpool_run         ,10f448    ,10f4e8
+AvgPool             ,10f500    ,10f538
+avgpool_s           ,10f53c    ,10f5c8
+default_build       ,10f618    ,10f6ac
+default_run         ,10f6b0    ,"10f704, 10f70c"
+BaseLayer           ,10f710    ,10f780
+baselayer_s         ,10f784    ,10f7ac
+concat_build        ,10f7b0    ,10f84c
+concat_run          ,10f920    ,10f9b0
+Concat              ,10fa30    ,10fab4
+concat_s            ,10fab8    ,10fae4
+conv2d_run          ,10fae8    ,10fbf8
+conv2d_free         ,10fc04    ,"10fc3c, 10fc44"
+conv2d_s            ,10fc48    ,10fdb4
+Conv2D              ,10fdf8    ,10ffc8
+conv_output_length  ,10ffcc    ,10fff0
+conv2d_build        ,10fff4    ,110178
+conv2d_trans_build  ,11017c    ,1102f4
+conv2d_trans_run    ,110300    ,1103cc
+conv2d_trans_s      ,1103d0    ,110408
+Conv2DTrans         ,11040c    ,110454
+conv_trans_output_length,110458    ,11046c
+cropping_build      ,110470    ,110550
+cropping_run        ,110554    ,1105c0
+Cropping            ,1105c4    ,1105f8
+cropping_s          ,1105fc    ,11062c
+dense_build         ,110630    ,11074c
+dense_run           ,110788    ,110848
+dense_free          ,11084c    ,"110884, 11088c"
+dense_s             ,110890    ,110958
+Dense               ,11095c    ,110acc
+dw_conv2d_build     ,110ad0    ,110c70
+dw_conv2d_run       ,110c74    ,110d40
+dw_conv2d_s         ,110d44    ,110d7c
+DW_Conv2D           ,110d80    ,110dc8
+flatten_run         ,110dcc    ,110dd0
+flatten_build       ,110dd4    ,110e68
+Flatten             ,110e6c    ,110ee0
+flatten_s           ,110ee4    ,110f0c
+global_pool_build   ,110f10    ,111074
+GlobalMaxPool       ,11109c    ,111114
+global_maxpool_s    ,111118    ,111148
+GlobalAvgPool       ,11114c    ,1111d0
+global_avgpool_s    ,1111d4    ,111204
+GlobalSumPool       ,111208    ,11128c
+global_sumpool_s    ,111290    ,1112c0
+gru_cell_free       ,1112c4    ,1112c8
+gru_cell_build      ,1112cc    ,111388
+gru_cell_run        ,11138c    ,11161c
+gru_cell_s          ,111620    ,1116a8
+input_build         ,1116ac    ,111714
+input_run           ,111718    ,111760
+input_s             ,111764    ,111888
+Input               ,1118ac    ,1119ac
+Lambda              ,1119b0    ,111a64
+lambda_s            ,111a70    ,111aa8
+lstm_cell_free      ,111aac    ,111ab0
+lstm_cell_q7_q15_build,111ab4    ,111b64
+lstm_cell_q7_q15_run,111b68    ,111ddc
+lstm_cell_s         ,111de0    ,111e70
+matrix_build        ,111e74    ,111f08
+add_run             ,111f20    ,111fd4
+sub_run             ,111ff4    ,1120a8
+mult_run            ,1120c8    ,11217c
+_same_shape_matrix_layer,11219c    ,1121fc
+Add                 ,112200    ,11223c
+add_s               ,112240    ,11226c
+Sub                 ,112270    ,1122ac
+sub_s               ,1122b0    ,1122dc
+Mult                ,1122e0    ,11231c
+mult_s              ,112320    ,11234c
+maxpool_build       ,112350    ,112440
+maxpool_run         ,112470    ,1124fc
+MaxPool             ,11250c    ,112600
+maxpool_s           ,112610    ,112694
+output_run          ,1126e4    ,112730
+output_s            ,112734    ,112798
+Output              ,11279c    ,1127f8
+reshape_run         ,1127fc    ,112800
+reshape_build       ,112804    ,112888
+reshape_s           ,11288c    ,112920
+rnn_free            ,112924    ,11295c
+rnn_build           ,112960    ,112a94
+rnn_run             ,112acc    ,112bb8
+rnn_s               ,112c40    ,112d08
+simple_cell_free    ,112d0c    ,112d10
+simple_cell_build   ,112d14    ,"112dc0, 112dc8"
+simple_cell_run     ,112dcc    ,112ea4
+simple_cell_s       ,112eb0    ,112f48
+softmax_build       ,112f4c    ,112fd0
+softmax_run         ,112fd4    ,11302c
+Softmax             ,113030    ,1130a4
+softmax_s           ,1130a8    ,1130d0
+sumpool_build       ,1130d4    ,113110
+sumpool_run         ,113114    ,1131ac
+SumPool             ,1131bc    ,1131f4
+sumpool_s           ,1131f8    ,113284
+upsample_build      ,1132d4    ,1133a0
+upsample_run        ,1133a4    ,113404
+UpSample            ,113408    ,113494
+upsample_s          ,113498    ,1134e4
+zero_padding_build  ,1134e8    ,1135cc
+zero_padding_run    ,1135d0    ,11363c
+ZeroPadding         ,113640    ,1136cc
+zeropadding_s       ,1136d0    ,113700
+merge               ,113704    ,113718
+unumprint.isra.0    ,113750    ,1137f0
+my_malloc           ,11384c    ,"11386c, 113898, 1138dc"
+my_free             ,1138e0    ,"113924, 11392c"
+memcpy              ,113930    ,113938
+memset              ,113954    ,113960
+platform_init_heap  ,113970    ,113a00
+heap_usage          ,113a04    ,113a18
+strncmp             ,113a38    ,"113a58, 113a6c"
+_fputc              ,113a70    ,113aa8
+_fputs              ,113aac    ,113ac8
+__vprintf           ,113acc    ,113b74
+printf              ,113e88    ,113ecc
+__heap_status       ,113ed0    ,113fb8
+__errno             ,114018    ,11401c
+mfcc_malloc         ,114020    ,11405c
+mfcc_free           ,114060    ,114068
+rearrange           ,11406c    ,114080
+compute             ,1140e4    ,114180
+fft                 ,114350    ,11439c
+mfcc_delete         ,1143a0    ,114424
+create_dct_matrix   ,114440    ,114588
+create_mel_fbank    ,11458c    ,1146f4
+mfcc_create         ,114884    ,114a0c
+mfcc_compute        ,114a74    ,114da4

@@ -105,7 +105,7 @@ void quantize_data(float*din, int8_t *dout, uint32_t size, uint32_t int_bit)
 
 
 
-void thread_kws_serv()
+int thread_kws_serv()
 {
 
     #define SaturaLH(N, L, H) (((N)<(L))?(L):(((N)>(H))?(H):(N)))
@@ -163,6 +163,10 @@ void thread_kws_serv()
 
         }
     mfcc_delete(mfcc);
+    printf("stopping");
+	asm volatile ("wfi");
+	printf("exiting wfi");
+    return 0;
 }
 
 
@@ -178,16 +182,18 @@ int main(void)
     float acc;
     int correct = 0;
     // puts("point1");
-    puts("point");
+    // puts("point");
     // FILE * file;
     // FILE * ground_truth_f;
     char str[10];
     int j=0;
     int F = 512;
-    puts("point2");
+    // puts("point2");
 
     //  ground_truth_f = fopen ("test_y.txt","r");
-    puts("point4");
+    // puts("point4");
+    // printf("value of j%d",j );
+    // printf("value of cosf%f",cosf(1.57));
    //file = fopen ("test_x.txt","r"); //the audio data stored in a textfile
    
    //the ground truth textfile
@@ -201,13 +207,13 @@ int main(void)
     ground_truth[1][0]="right"; //change this for ground truth value
 
     nnom_model_t *model;
- puts("point3");
+//  puts("point3");
 
     int p = 0;
 
     // create and compile the model
     model = nnom_model_create();
-    puts("p5");
+    // puts("p5");
     int n=0;
      int frame_index = 0;
     int audio_index = 0;
@@ -224,11 +230,12 @@ int main(void)
         audio_index++;
     };
     frame_index=0;
-    puts("p6");
+    // puts("p6");
 
         // }
         p=0;
         thread_kws_serv();
+        // puts(" p ");
         audio_sample_i = audio_sample_i + F;
         if(audio_sample_i == 15872) //31*512
             F = 128; //0.25*512
@@ -238,19 +245,19 @@ int main(void)
         if(audio_sample_i>=16000)
         {
             // ML
-            memcpy(nnom_input_data, mfcc_features, MFCC_FEAT_SIZE);
-            nnom_predict(model, &label, &prob);
+            // memcpy(nnom_input_data, mfcc_features, MFCC_FEAT_SIZE);
+            // nnom_predict(model, &label, &prob);
             
 
-            // output
-            printf("%d %s : %d%% - Ground Truth is: %s\n", s, (char*)&label_name[label], (int)(prob * 100),ground_truth[s]);
-            // return 0;
-            // if(strcmp(ground_truth[s], label_name[label])==0) correct++;
-            if(s%100==0 && s > 0)
-            {
-                acc = ((float)correct/(s) * 100);
-                // printf("Accuracy : %.6f%%\n",acc);
-            }
+            // // output
+            // printf("%d %s : %d%% - Ground Truth is: %s\n", s, (char*)&label_name[label], (int)(prob * 100),ground_truth[s]);
+            // // return 0;
+            // // if(strcmp(ground_truth[s], label_name[label])==0) correct++;
+            // if(s%100==0 && s > 0)
+            // {
+            //     acc = ((float)correct/(s) * 100);
+            //     // printf("Accuracy : %.6f%%\n",acc);
+            // }
             audio_sample_i = 0;
             F = 512;
             s=s+1;
@@ -258,8 +265,9 @@ int main(void)
 
         if(s>=1) break;
     }
-    acc = ((float)correct/(s) * 100);
-    printf("\nsucess\n\n");
+    // acc = ((float)correct/(s) * 100);
+    printf("\nsuccess\n\n");
+    return 0;
     // printf("Accuracy : %.6f%%\n",acc);
     // fclose(file);
 

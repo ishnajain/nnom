@@ -26,7 +26,7 @@
 // in main.c define "PLATFORM_ARM" before including 'mfcc.h' to use ARM optimized FFT
 #ifdef PLATFORM_ARM
 #include "arm_math.h"
-#define MFCC_PLATFORM_ARM
+// #define MFCC_PLATFORM_ARM
 #endif
 
 #include <stdint.h>
@@ -74,7 +74,7 @@ float * create_dct_matrix(int32_t input_length, int32_t coefficient_count);
 float ** create_mel_fbank(mfcc_t* mfcc);
 
 mfcc_t *mfcc_create(int num_mfcc_features, int feature_offset, int num_fbank, int frame_len, float preempha, int is_append_energy);
-void mfcc_delete(mfcc_t* mfcc);
+int mfcc_delete(mfcc_t* mfcc);
 
 void mfcc_compute(mfcc_t *mfcc, const int16_t * audio_data, float* mfcc_out);
 

@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include "nnom_port.h"
 #include <stdarg.h>
+#include <stdbool.h>
 
 #define get_num_va_args(_args, _lcount)			\
 	(((_lcount) >= 2) ? va_arg(_args, int64_t) :	\
@@ -26,7 +27,7 @@
 	(((_lcount) >= 2) ? va_arg(_args, uint64_t) :		\
 	((_lcount) == 1) ? va_arg(_args, unsigned long) :	\
 			    va_arg(_args, unsigned int))
-#define USE_FLOAT 0
+#define USE_FLOAT 1
 // #include <lock/lock.h>
 // #include <arch.h>
 // #include <mmio.h>
@@ -147,10 +148,10 @@ exit:
 	return p;
 }
 
-void my_free(void *ptr)
+int  my_free(void *ptr)
 {
 	if(ptr == NULL)
-		return;
+		return 0;
 
 	chunk_t *cur = get_header(ptr);
 	// heap_lock();
@@ -160,9 +161,10 @@ void my_free(void *ptr)
 		cur->free = 1;
 		merge();
 		merge();
+		(volatile void ) 0;
 	}
 	// heap_unlock();
-	return;
+	return 0;
 }
 #if 0
 void *calloc(size_t n_blocks, size_t n_bytes)

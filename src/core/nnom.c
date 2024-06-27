@@ -271,7 +271,7 @@ static nnom_layer_t *model_active(nnom_activation_t *act, nnom_layer_t *target)
 nnom_model_t *new_model(nnom_model_t *model)
 {
 	// nnom_model_t *m = model;
-	puts("p10");
+	// puts("p10");
 	if (model == NULL)
 	{
 		model = nnom_mem(sizeof(nnom_model_t));

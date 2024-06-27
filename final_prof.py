@@ -94,10 +94,12 @@ def write_results(filename, functions, log_data):
 # Main function
 def main():
     function_table = read_function_table('function_table.csv')
-    filename='trace_core_00000000.log'
-    log_file_path = '../../../../' + filename
+    filename='tracecore_00000000.log'
+    log_file_path = '../../../../../../../../media/ishna/Windows-SSD/FYP_windows/' + filename
     log_data = read_log_file(log_file_path)
-    write_results('output.csv', function_table, log_data)
+    out_filename ='prof_log.csv'
+    out_file_path='../'+ out_filename
+    write_results('prof_log.csv', function_table, log_data)
 
 if __name__ == "__main__":
     main()

@@ -396,13 +396,13 @@ const nnom_io_config_t output0_config = {
 /* nnom model */
 static nnom_model_t* nnom_model_create(void)
 {
-    puts("p7");
+    // puts("p7");
 	static nnom_model_t model;
 	nnom_layer_t* layer[15];
-     puts("p8");
+    //  puts("p8");
 	check_model_version(NNOM_MODEL_VERSION);
 	new_model(&model);
-       puts("p9");
+    //    puts("p9");
 
 	layer[0] = input_s(&input_1_config);
 	layer[1] = model.hook(conv2d_s(&conv2d_config), layer[0]);
